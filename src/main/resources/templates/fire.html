@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title th:text = "${title}"></title>
+    <title>Учет и состояние огнетушителей</title>
     <style>
         body{
             padding-top: 60px;
@@ -36,9 +36,15 @@
 </head>
 <body>
     <header th:insert="blocks/header :: header"></header>
-    <main>
-
-    </main>
+<main>
+    <div>
+        <div th:each="el : ${posts}">
+            <p th:text="${el.model}">
+            <p th:text="${el.place}">
+            <a th:href="'/fire/' + ${el.id}">Подробнее</a>
+        </div>
+    </div>
+</main>
     <footer th:insert="blocks/footer :: footer"></footer>
 </body>
 </html>
