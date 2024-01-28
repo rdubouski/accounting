@@ -2,9 +2,51 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title th:text = "${title}"/>
+    <title th:text = "${title}"></title>
+    <style>
+        body{
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+        .fixed-header, .fixed-footer{
+            width: 100%;
+            position: fixed;
+            background: #333;
+            padding: 10px 0;
+            color: #ffff;
+        }
+        .fixed-header{
+            top: 0;
+        }
+        .fixed-footer{
+            bottom: 0;
+        }
+        .container{
+            width: 80%;
+            margin: 0 auto; /* Center the DIV horizontally */
+        }
+        nav a{
+            color: #ffff;
+            text-decoration: none;
+            padding: 7px 25px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
-    <p th:text = "'Hello ' + ${title}"/>
+    <header>
+        <nav class="fixed-header">
+            <a href="#">Мои работы</a>
+            <a href="#">Мои навыки</a>
+            <a href="#">Контакты</a>
+        </nav>
+    </header>
+    <main>
+        <div>Учет и состояние огнетушителей</div><br>
+        <div>Учет и состояние аптечек</div><br>
+    </main>
+    <footer>
+        <p class="fixed-footer">Полоцкгаз 2024</p>
+    </footer>
 </body>
 </html>
