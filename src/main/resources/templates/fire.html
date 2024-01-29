@@ -9,11 +9,18 @@
     <header th:insert="blocks/header :: header"></header>
 <main>
     <div>
-        <div th:each="el : ${posts}">
-            <p th:text="${el.model}">
-            <p th:text="${el.place}">
-            <a th:href="'/fire/' + ${el.id}">Подробнее</a>
-        </div>
+        <table>
+            <tr>
+                <th>Модель</th>
+                <th>Место</th>
+                <th>Информация</th>
+            </tr>
+            <tr th:each="el : ${posts}">
+            <td th:text="${el.model}"/>
+            <td th:text="${el.place}"/>
+            <td><a th:href="'/fire/' + ${el.id}">Подробнее</a></td>
+            </tr>
+        </table>
     </div>
 </main>
     <footer th:insert="blocks/footer :: footer"></footer>
