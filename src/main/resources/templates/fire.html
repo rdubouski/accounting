@@ -11,14 +11,21 @@
     <div>
         <table>
             <tr>
-                <th>Модель</th>
-                <th>Место</th>
-                <th>Информация</th>
+                <th>Служба</th>
+                <th>Номер, присвоенный огнетушителю</th>
+                <th>Марка огнетушителя</th>
+                <th>Место установки огнетушителя</th>
+                <th>Дата зарядки огнетушителя</th>
+                <th>Дата плановой перезарядки огнетушителя</th>
             </tr>
-            <tr th:each="el : ${posts}">
-            <td th:text="${el.model}"/>
-            <td th:text="${el.place}"/>
-            <td><a th:href="'/fire/' + ${el.id}">Подробнее</a></td>
+            <tr th:each="el : ${lists}">
+                <td th:text="${el.department}"/>
+                <td th:text="${el.number}"/>
+                <td th:text="${el.brand}"/>
+                <td th:text="${el.place}"/>
+                <td th:text="${#dates.format(el.date_load, 'MM.yyyy')}"/>
+                <td th:text="${#dates.format(el.date_reload, 'MM.yyyy')}"/>
+                <td><a th:href="'/fire/' + ${el.id}">Подробнее</a></td>
             </tr>
         </table>
     </div>

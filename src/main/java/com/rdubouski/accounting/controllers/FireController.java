@@ -1,7 +1,7 @@
 package com.rdubouski.accounting.controllers;
 
-import com.rdubouski.accounting.models.Post;
-import com.rdubouski.accounting.repo.PostRepository;
+import com.rdubouski.accounting.models.ListExtinguishers;
+import com.rdubouski.accounting.repo.ListExtinguishersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class FireController {
 
     @Autowired
-    private PostRepository postRepository;
+    private ListExtinguishersRepository listExtinguishersRepository;
 
     @GetMapping("/fire")
     public String home(Model model) {
-        Iterable<Post> posts = postRepository.findAll();
-        model.addAttribute("posts", posts);
+        Iterable<ListExtinguishers> listExtinguishers = listExtinguishersRepository.findAll();
+        model.addAttribute("lists", listExtinguishers);
         return "fire";
     }
 

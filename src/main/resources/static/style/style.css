@@ -27,7 +27,7 @@ nav a{
     display: inline-block;
 }
 table {
-    border-spacing: 0 10px;
+    border-collapse: collapse;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
