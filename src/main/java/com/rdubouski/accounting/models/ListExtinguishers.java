@@ -1,9 +1,6 @@
 package com.rdubouski.accounting.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.Date;
 
@@ -12,6 +9,7 @@ public class ListExtinguishers {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", updatable = false, nullable = false, unique=true)
     private Long id;
 
     private String department, number, brand, place;
@@ -72,4 +70,17 @@ public class ListExtinguishers {
     public void setDate_reload(java.sql.Date date_reload) {
         this.date_reload = date_reload;
     }
+
+    public ListExtinguishers() {
+    }
+
+    public ListExtinguishers(String department, String number, String brand, String place, java.sql.Date date_load, java.sql.Date date_reload) {
+        this.department = department;
+        this.number = number;
+        this.brand = brand;
+        this.place = place;
+        this.date_load = date_load;
+        this.date_reload = date_reload;
+    }
+
 }

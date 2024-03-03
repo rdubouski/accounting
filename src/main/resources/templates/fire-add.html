@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text = "${title}"></title>
+    <link rel="stylesheet" th:href="@{/style/style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main>
+    <div>
+        <h1>Добавление огнетушителя</h1>
+        <form action="/fire/add" method="post">
+            <input type="text" name="department" placeholder="Введите название отдела"><br><br>
+            <input type="text" name="number" placeholder="Введите номер огнетушителя"><br><br>
+            <input type="text" name="brand" placeholder="Введите модель огнетушителя"><br><br>
+            <input type="text" name="place" placeholder="Введите место установки огнетушителя"><br><br>
+            <input type="text" name="date_load" placeholder="Введите дату зарядки"><br><br>
+            <input type="text" name="date_reload" placeholder="Введите дату перезарядки"><br><br>
+            <button type="submit">Добавить огнетушитель</button>
+
+        </form>
+    </div>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
