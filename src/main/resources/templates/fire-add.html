@@ -11,12 +11,18 @@
     <div>
         <h1>Добавление огнетушителя</h1>
         <form action="/fire/add" method="post">
-            <input type="text" name="department" placeholder="Введите название отдела"><br><br>
-            <input type="text" name="number" placeholder="Введите номер огнетушителя"><br><br>
-            <input type="text" name="brand" placeholder="Введите модель огнетушителя"><br><br>
-            <input type="text" name="place" placeholder="Введите место установки огнетушителя"><br><br>
-            <input type="text" name="date_load" placeholder="Введите дату зарядки"><br><br>
-            <input type="text" name="date_reload" placeholder="Введите дату перезарядки"><br><br>
+            <label>Введите название отдела:</label>
+            <input type="text" size="50" name="department"><br><br>
+            <label>Введите номер огнетушителя:</label>
+            <input type="text" size="50" name="number"><br><br>
+            <label>Введите модель огнетушителя:</label>
+            <input type="text" size="50" name="brand"><br><br>
+            <label>Введите место установки огнетушителя:</label>
+            <input type="text" size="50" name="place"><br><br>
+            <label>Введите дату зарядки:</label>
+            <input type="date" name="date_load"><br><br>
+            <label>Введите дату перезарядки:</label>
+            <input type="date" name="date_reload"><br><br>
             <button type="submit">Добавить огнетушитель</button>
 
         </form>

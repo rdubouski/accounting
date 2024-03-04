@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text = "${title}"></title>
+    <link rel="stylesheet" th:href="@{/style/style.css}"/>
+</head>
+<body>
+<header th:insert="blocks/header :: header"></header>
+<main>
+    <div>
+        <h1>Редактирование огнетушителя</h1>
+        <div th:each="el : ${le}">
+            <form method="post">
+                <label>Введите название отдела:</label>
+                <input type="text" size="50" th:value="${el.department}" name="department"><br><br>
+                <label>Введите номер огнетушителя:</label>
+                <input type="text" size="50" th:value="${el.number}" name="number"><br><br>
+                <label>Введите модель огнетушителя:</label>
+                <input type="text" size="50" th:value="${el.brand}" name="brand"><br><br>
+                <label>Введите место установки огнетушителя:</label>
+                <input type="text" size="50" th:value="${el.place}" name="place"><br><br>
+                <label>Введите дату зарядки:</label>
+                <input type="date" th:value="${el.date_load}" name="date_load"><br><br>
+                <label>Введите дату перезарядки:</label>
+                <input type="date" th:value="${el.date_reload}" name="date_reload"><br><br>
+                <button type="submit">Обновить огнетушитель</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer th:insert="blocks/footer :: footer"></footer>
+</body>
+</html>
