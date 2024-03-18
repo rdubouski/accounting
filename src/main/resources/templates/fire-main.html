@@ -10,31 +10,33 @@
 </head>
 <body>
 
-    <header th:insert="blocks/header :: header"></header>
-<main>
-    <div>
-        <table id="tableId">
-            <tr>
-                <th>Служба</th>
-                <th>Номер, присвоенный огнетушителю</th>
-                <th>Марка огнетушителя</th>
-                <th>Место установки огнетушителя</th>
-                <th>Дата зарядки огнетушителя</th>
-                <th>Дата плановой перезарядки огнетушителя</th>
-                <th>Подробнее</th>
-            </tr>
-            <tr th:each="el : ${lists}">
-                <td th:text="${el.department}"/>
-                <td th:text="${el.number}"/>
-                <td th:text="${el.brand}"/>
-                <td th:text="${el.place}"/>
-                <td th:text="${#dates.format(el.date_load, 'MM.yyyy')}"/>
-                <td th:text="${el.date_reload}"/>
-                <td><a th:href="'/fire/' + ${el.id}">Подробнее</a></td>
-            </tr>
-        </table>
-    </div>
-</main>
-    <footer th:insert="blocks/footer :: footer"></footer>
+    <header th:insert="~{blocks/header :: header}"></header>
+    <main>
+        <div>
+            <table id="tableId">
+                <tr>
+                    <th>Служба</th>
+                    <th>Ответственный</th>
+                    <th>Номер, присвоенный огнетушителю</th>
+                    <th>Марка огнетушителя</th>
+                    <th>Место установки огнетушителя</th>
+                    <th>Дата зарядки огнетушителя</th>
+                    <th>Дата плановой перезарядки огнетушителя</th>
+                    <th>Подробнее</th>
+                </tr>
+                <tr th:each="el : ${lists}">
+                    <td th:text="${el.department}"/>
+                    <td th:text="${el.fio}"/>
+                    <td th:text="${el.number}"/>
+                    <td th:text="${el.brand}"/>
+                    <td th:text="${el.place}"/>
+                    <td th:text="${el.date_load}"/>
+                    <td th:text="${el.date_reload}"/>
+                    <td><a th:href="'/fire/' + ${el.id}">Подробнее</a></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer th:insert="~{blocks/footer :: footer}"></footer>
 </body>
 </html>

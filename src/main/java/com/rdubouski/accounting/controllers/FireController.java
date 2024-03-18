@@ -32,10 +32,10 @@ public class FireController {
     }
 
     @PostMapping("/fire/add")
-    public String fireNewAdd(@RequestParam String department, @RequestParam String number,
+    public String fireNewAdd(@RequestParam String department, @RequestParam String fio, @RequestParam String number,
                              @RequestParam String brand, @RequestParam String place,
                              @RequestParam java.sql.Date date_load, @RequestParam java.sql.Date date_reload, Model model) {
-        ListExtinguishers lE = new ListExtinguishers(department, number, brand, place, date_load, date_reload);
+        ListExtinguishers lE = new ListExtinguishers(department, fio, number, brand, place, date_load, date_reload);
         listExtinguishersRepository.save(lE);
         return "redirect:/fire";
     }
@@ -65,11 +65,12 @@ public class FireController {
     }
 
     @PostMapping("/fire/{id}/edit")
-    public String fireUpdate(@PathVariable(value = "id") long id, @RequestParam String department,
+    public String fireUpdate(@PathVariable(value = "id") long id, @RequestParam String department, @RequestParam String fio,
                              @RequestParam String number, @RequestParam String brand, @RequestParam String place,
                              @RequestParam java.sql.Date date_load, @RequestParam java.sql.Date date_reload, Model model) {
         ListExtinguishers listExtinguishers = listExtinguishersRepository.findById(id).orElseThrow();
         listExtinguishers.setDepartment(department);
+        listExtinguishers.setFio(fio);
         listExtinguishers.setNumber(number);
         listExtinguishers.setBrand(brand);
         listExtinguishers.setPlace(place);

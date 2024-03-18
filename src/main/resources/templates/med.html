@@ -6,10 +6,10 @@
     <link rel="stylesheet" th:href="@{/style/style.css}"/>
 </head>
 <body>
-    <header th:insert="blocks/header :: header"></header>
-<main>
-    <div><h1>Раздел находится в разработке!</h1></div>
-</main>
-    <footer th:insert="blocks/footer :: footer"></footer>
+    <header th:insert="~{blocks/header :: header}"></header>
+    <main>
+        <div><h1>Раздел находится в разработке!</h1></div>
+    </main>
+    <footer th:insert="~{blocks/footer :: footer}"></footer>
 </body>
 </html>

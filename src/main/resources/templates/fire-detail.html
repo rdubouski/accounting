@@ -10,12 +10,12 @@
 </head>
 <body>
 
-<header th:insert="blocks/header :: header"></header>
-<main>
+    <header th:insert="~{blocks/header :: header}"></header><main>
     <div>
         <table id="tableId">
             <tr>
                 <th>Служба</th>
+                <th>Ответственный</th>
                 <th>Номер, присвоенный огнетушителю</th>
                 <th>Марка огнетушителя</th>
                 <th>Место установки огнетушителя</th>
@@ -26,10 +26,11 @@
             </tr>
             <tr th:each="el : ${le}">
                 <td th:text="${el.department}"/>
+                <td th:text="${el.fio}"/>
                 <td th:text="${el.number}"/>
                 <td th:text="${el.brand}"/>
                 <td th:text="${el.place}"/>
-                <td th:text="${#dates.format(el.date_load, 'MM.yyyy')}"/>
+                <td th:text="${el.date_load}"/>
                 <td th:text="${el.date_reload}"/>
                 <td><a th:href="'/fire/' + ${el.id} + '/edit'">Редактировать</a></td>
                 <td>
@@ -41,6 +42,5 @@
         </table>
     </div>
 </main>
-<footer th:insert="blocks/footer :: footer"></footer>
-</body>
+    <footer th:insert="~{blocks/footer :: footer}"></footer></body>
 </html>

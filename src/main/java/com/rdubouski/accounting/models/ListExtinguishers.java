@@ -12,7 +12,7 @@ public class ListExtinguishers {
     @Column(name = "id", updatable = false, nullable = false, unique=true)
     private Long id;
 
-    private String department, number, brand, place;
+    private String department, fio, number, brand, place;
     private java.sql.Date date_load, date_reload;
 
     public Long getId() {
@@ -29,6 +29,14 @@ public class ListExtinguishers {
 
     public void setDepartment(String department) {
         this.department = department;
+    }
+
+    public String getFio() {
+        return fio;
+    }
+
+    public void setFio(String fio) {
+        this.fio = fio;
     }
 
     public String getNumber() {
@@ -74,8 +82,9 @@ public class ListExtinguishers {
     public ListExtinguishers() {
     }
 
-    public ListExtinguishers(String department, String number, String brand, String place, java.sql.Date date_load, java.sql.Date date_reload) {
+    public ListExtinguishers(String department, String fio, String number, String brand, String place, java.sql.Date date_load, java.sql.Date date_reload) {
         this.department = department;
+        this.fio = fio;
         this.number = number;
         this.brand = brand;
         this.place = place;
