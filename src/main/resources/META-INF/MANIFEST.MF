@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Main-Class: com.rdubouski.accounting.AccountingApplication
+Class-Path: spring-expression-6.1.3.jar spring-web-6.1.3.jar log4j-api-2
+ .21.1.jar logback-classic-1.4.14.jar log4j-to-slf4j-2.21.1.jar jackson-
+ databind-2.15.3.jar spring-orm-6.1.3.jar logback-core-1.4.14.jar angus-
+ activation-2.0.1.jar istack-commons-runtime-4.1.2.jar jcl-over-slf4j-2.
+ 0.11.jar antlr4-runtime-4.13.0.jar jandex-3.1.2.jar spring-boot-starter
+ -web-3.2.2.jar spring-aop-6.1.3.jar spring-boot-starter-logging-3.2.2.j
+ ar caffeine-3.1.8.jar unbescape-1.1.6.RELEASE.jar jackson-module-parame
+ ter-names-2.15.3.jar spring-boot-starter-json-3.2.2.jar spring-boot-sta
+ rter-jdbc-3.2.2.jar checker-qual-3.32.0.jar jaxb-runtime-4.0.4.jar jaxb
+ -core-4.0.4.jar spring-boot-3.2.2.jar micrometer-commons-1.12.2.jar spr
+ ing-data-jpa-3.2.2.jar mariadb-java-client-3.3.2.jar thymeleaf-3.1.2.RE
+ LEASE.jar spring-context-6.1.3.jar spring-boot-starter-data-jpa-3.2.2.j
+ ar jul-to-slf4j-2.0.11.jar mysql-connector-j-8.0.33.jar byte-buddy-1.14
+ .11.jar error_prone_annotations-2.21.1.jar classmate-1.6.0.jar spring-b
+ oot-starter-tomcat-3.2.2.jar spring-tx-6.1.3.jar spring-aspects-6.1.3.j
+ ar jakarta.xml.bind-api-4.0.1.jar spring-boot-starter-thymeleaf-3.2.2.j
+ ar hibernate-core-6.4.1.Final.jar spring-core-6.1.3.jar jboss-logging-3
+ .5.3.Final.jar jackson-core-2.15.3.jar hibernate-commons-annotations-6.
+ 0.6.Final.jar HikariCP-5.0.1.jar micrometer-observation-1.12.2.jar spri
+ ng-boot-starter-aop-3.2.2.jar spring-jcl-6.1.3.jar snakeyaml-2.2.jar to
+ mcat-embed-el-10.1.18.jar jackson-annotations-2.15.3.jar jakarta.activa
+ tion-api-2.1.2.jar jackson-datatype-jsr310-2.15.3.jar spring-boot-devto
+ ols-3.2.2.jar spring-beans-6.1.3.jar jakarta.transaction-api-2.0.1.jar 
+ jakarta.inject-api-2.0.1.jar spring-webmvc-6.1.3.jar jackson-datatype-j
+ dk8-2.15.3.jar aspectjweaver-1.9.21.jar txw2-4.0.4.jar slf4j-api-2.0.11
+ .jar attoparser-2.0.7.RELEASE.jar tomcat-embed-websocket-10.1.18.jar jn
+ a-platform-5.13.0.jar jakarta.persistence-api-3.1.0.jar jakarta.annotat
+ ion-api-2.1.1.jar spring-jdbc-6.1.3.jar waffle-jna-3.3.0.jar tomcat-emb
+ ed-core-10.1.18.jar spring-data-commons-3.2.2.jar spring-boot-starter-3
+ .2.2.jar thymeleaf-spring6-3.1.2.RELEASE.jar spring-boot-autoconfigure-
+ 3.2.2.jar jna-5.13.0.jar
+

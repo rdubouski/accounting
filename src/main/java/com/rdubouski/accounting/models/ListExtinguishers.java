@@ -1,10 +1,12 @@
 package com.rdubouski.accounting.models;
 
 import jakarta.persistence.*;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Date;
 
 @Entity
+@Table(name = "ListExtinguishers")
 public class ListExtinguishers {
 
     @Id
